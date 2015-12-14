@@ -1,0 +1,11 @@
+<ul>
+  <% @doctors.each do |doctor| %>
+    <li> Name: <%= doctor.name %> </li>
+    <li> Address: <%= doctor.address %>  </li>
+    <li> City: <%= doctor.city %> </li>
+    <li> State: <%= doctor.state %> </li>
+    <li> Zip: <%= doctor.zip %> </li>
+    <li> School Recieved Degree From: <%= doctor.school_recieved_degree_from %> </li>
+    <li> Years in Practice: <%= doctor.years_in_practice %> </li>
+  <% end %>
+</ul>

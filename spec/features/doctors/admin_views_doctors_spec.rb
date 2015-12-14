@@ -7,7 +7,9 @@ feature "admin visits doctors index page", %{
 } do
 
   scenario "admin visists index page" do
+    doctor = FactoryGirl.create(:doctor)
     admin = FactoryGirl.create(:admin)
+
     visit new_admin_session_path
     fill_in 'Email', with: admin.email
     fill_in 'Password', with: admin.password
