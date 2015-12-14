@@ -1,4 +1,4 @@
-require "rails-helper"
+require 'rails_helper'
 
 feature "admin visits doctors index page", %{
   As the owner of a veterinary practice,
