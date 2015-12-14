@@ -8,9 +8,10 @@ feature "admin visits doctors index page", %{
 
   scenario "admin visists index page" do
     admin = FactoryGirl.create(:admin)
-    doctor = FactoryGirl.create(:doctor)
-
-    admin_sign_in
+    visit new_admin_session_path
+    fill_in 'Email', with: admin.email
+    fill_in 'Password', with: admin.password
+    click_button 'Log in'
     visit doctors_path
 
     expect(page).to have_content(doctor.name)
