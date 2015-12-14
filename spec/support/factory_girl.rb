@@ -22,4 +22,13 @@ FactoryGirl.define do
     school_recieved_degree_from "University of Austin"
     years_in_practice 12
   end
+
+  factory :pet do
+    name_of_pet "Freddy"
+    type_of_pet "bird"
+    breed "Malaysian parrot"
+    age 88
+    weight 4.0
+    date_of_last_visit "2014-12-15"
+  end
 end

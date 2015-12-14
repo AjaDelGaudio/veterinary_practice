@@ -1,6 +1,6 @@
-equire 'rails_helper'
+require 'rails_helper'
 
-feature "admin visits pets new page", %{
+feature "admin adds new pet", %{
   As a practicing doctor at the veterinary practice,
   I want to record information about a customer's pet
   So I can reference it in the future.
