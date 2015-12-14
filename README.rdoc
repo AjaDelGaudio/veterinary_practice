@@ -1,3 +1,5 @@
+![Build Status](https://codeship.com/projects/veterinary_practice/status?branch=master)![Code Climate](https://codeclimate.com/github/<AjaDelGaudio>/<veterinary_practice>.png) ![Coverage Status](https://coveralls.io/repos/<AjaDelGaudio>/<veterinary_practice>/badge.png)
+
 == README
 
 This README would normally document whatever steps are necessary to get the
