@@ -11,17 +11,17 @@ feature "admin adds new pet", %{
     admin = FactoryGirl.create(:admin)
 
     visit new_admin_session_path
-    fill_in 'Email', with: admin.email
-    fill_in 'Password', with: admin.password
-    click_button 'Log in'
+    fill_in "Email", with: admin.email
+    fill_in "Password", with: admin.password
+    click_button "Log in"
     visit new_pet_path
 
-    fill_in "Name of Pet", with: pet.name_of_pet
-    fill_in "Type of Pet", with: pet.type_of_pet
+    fill_in "Name of pet", with: pet.name_of_pet
+    select pet.type_of_pet, from: "Type of pet"
     fill_in "Breed", with: pet.breed
     fill_in "Age", with: pet.age
     fill_in "Weight", with: pet.weight
-    fill_in "Date of Last Visit", with: pet.date_of_last_visit
+    fill_in "Date of last visit", with: pet.date_of_last_visit
     click_button "Submit"
 
     expect(page).to have_content(pet.name_of_pet)
@@ -37,12 +37,12 @@ feature "admin adds new pet", %{
     admin = FactoryGirl.create(:admin)
 
     visit new_admin_session_path
-    fill_in 'Email', with: admin.email
-    fill_in 'Password', with: admin.password
-    click_button 'Log in'
+    fill_in "Email", with: admin.email
+    fill_in "Password", with: admin.password
+    click_button "Log in"
     visit new_pet_path
 
-    fill_in "Type of Pet", with: pet.type_of_pet
+    select pet.type_of_pet, from: "Type of pet"
     click_button "Submit"
 
     expect(page).not_to have_content(pet.type_of_pet)
