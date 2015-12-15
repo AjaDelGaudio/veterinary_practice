@@ -25,7 +25,7 @@ FactoryGirl.define do
 
   factory :pet do
     name_of_pet "Freddy"
-    type_of_pet "bird"
+    type_of_pet "Bird"
     breed "Malaysian parrot"
     age 88
     weight 4.0
