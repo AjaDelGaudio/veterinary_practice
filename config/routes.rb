@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :doctors, only: [:index]
-  resources :pets, only: [:new]
+  resources :pets, only: [:new, :create]
 end
