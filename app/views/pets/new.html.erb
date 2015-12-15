@@ -1,0 +1,23 @@
+<%= form_for @pet do |f| %>
+
+  <%= f.label :name_of_pet %>
+  <%= f.text_field :name_of_pet %>
+
+  <%= f.label :type_of_pet %>
+  <%= f.collection_select("Cat", "Dog", "Bird") %>
+
+  <%= f.label :breed %>
+  <%= f.text_field :breed %>
+
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+
+  <%= f.label :weight %>
+  <%= f.text_field :weight %>
+
+  <%= f.label :date_of_last_visit %> <i>(yyyy-mm-dd)</i>
+  <%= f.text_field :date_of_last_visit %>
+
+  <%= f.submit "Submit" %>
+
+<% end %>

@@ -2,7 +2,7 @@ class PetsController < ApplicationController
   before_action :authenticate_admin!
 
   def new
-    @pets = Pet.new
+    @pet = Pet.new
   end
 
   def create
