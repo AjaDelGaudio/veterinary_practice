@@ -33,5 +33,4 @@ class PetsController < ApplicationController
       :id
     )
   end
-
 end
