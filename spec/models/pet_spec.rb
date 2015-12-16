@@ -4,7 +4,7 @@ RSpec.describe Pet, type: :model do
   it { should validate_presence_of(:name_of_pet) }
   it { should_not allow_value(nil).for(:name_of_pet) }
 
-  it { should validate_inclusion_of(:type_of_pet).in_array(["dog", "cat", "bird"]) }
+  it { should validate_inclusion_of(:type_of_pet).in_array(["Cat", "Dog", "Bird"]) }
 
   it { should validate_length_of(:breed).is_at_most(35) }
 
