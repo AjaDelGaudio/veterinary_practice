@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 feature "admin adds new pet", %{
   As a practicing doctor at the veterinary practice,

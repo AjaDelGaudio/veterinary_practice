@@ -19,10 +19,16 @@
 require 'coveralls'
 Coveralls.wear!('rails')
 
-require 'capybara'
-Capybara.ignore_hidden_elements = true
 
 RSpec.configure do |config|
+
+  require 'capybara'
+  Capybara.ignore_hidden_elements = true
+
+  require 'database_cleaner'
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+  end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

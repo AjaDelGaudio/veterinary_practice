@@ -48,6 +48,7 @@ end
 group :test do
   gem 'coveralls', require: false
   gem 'shoulda-matchers'
+  gem 'database_cleaner'
 end
 
 gem 'rspec-rails', group: [:development, :test]
